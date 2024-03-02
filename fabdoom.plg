@@ -1,0 +1,107 @@
+--------------------Configuration: fabdoom - Win32 Release--------------------
+Begining build with project "E:\msvc\DevStudio\MyProjects\legacy\fabdoom.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /Zi /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "__WIN32__" /D "__MSC__" /D "USEASM" /Fp"Release/fabdoom.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x40c /fo"Release/winlgcy.res" /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/fabdoom.bsc" "
+			"COFF Linker for 80x86" with flags "dxguid.lib dinput.lib dsound.lib ddraw.lib winmm.lib wsock32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/windoom3.pdb" /debug /machine:I386 /out:"e:\jeux\doom2\windoom3.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "c:\tmp\tmp\RSP7012.TMP" with contents </nologo /ML /W3 /GX /Zi /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "__WIN32__" /D "__MSC__" /D "USEASM" /Fp"Release/fabdoom.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\msvc\DevStudio\MyProjects\legacy\i_tcp.c"
+>
+Creating command line "cl.exe @c:\tmp\tmp\RSP7012.TMP" 
+Creating temp file "c:\tmp\tmp\RSP7013.TMP" with contents <dxguid.lib dinput.lib dsound.lib ddraw.lib winmm.lib wsock32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/windoom3.pdb" /debug /machine:I386 /out:"e:\jeux\doom2\windoom3.exe" 
+.\Release\dx_error.obj
+.\Release\fabdxlib.obj
+.\Release\hwr_main.obj
+.\Release\Mid2strm.obj
+.\Release\win_cd.obj
+.\Release\win_dbg.obj
+.\Release\win_dll.obj
+.\Release\win_main.obj
+.\Release\win_net.obj
+.\Release\win_snd.obj
+.\Release\win_sys.obj
+.\Release\win_vid.obj
+.\Release\Dstrings.obj
+.\Release\g_state.obj
+.\Release\M_fixed.obj
+.\Release\M_swap.obj
+.\Release\Tables.obj
+.\Release\Am_map.obj
+.\Release\Command.obj
+.\Release\Console.obj
+.\Release\D_clisrv.obj
+.\Release\D_items.obj
+.\Release\D_main.obj
+.\Release\D_net.obj
+.\Release\D_netcmd.obj
+.\Release\D_netfil.obj
+.\Release\Dehacked.obj
+.\Release\F_finale.obj
+.\Release\F_wipe.obj
+.\Release\G_game.obj
+.\Release\G_input.obj
+.\Release\Hu_stuff.obj
+.\Release\i_tcp.obj
+.\Release\Info.obj
+.\Release\M_argv.obj
+.\Release\M_bbox.obj
+.\Release\M_cheat.obj
+.\Release\M_menu.obj
+.\Release\M_misc.obj
+.\Release\M_random.obj
+.\Release\P_ceilng.obj
+.\Release\P_doors.obj
+.\Release\P_enemy.obj
+.\Release\P_fab.obj
+.\Release\P_floor.obj
+.\Release\P_inter.obj
+.\Release\P_lights.obj
+.\Release\P_map.obj
+.\Release\P_maputl.obj
+.\Release\P_mobj.obj
+.\Release\P_plats.obj
+.\Release\P_pspr.obj
+.\Release\P_saveg.obj
+.\Release\P_setup.obj
+.\Release\P_sight.obj
+.\Release\P_spec.obj
+.\Release\P_switch.obj
+.\Release\P_telept.obj
+.\Release\P_tick.obj
+.\Release\P_user.obj
+.\Release\Qmus2mid.obj
+.\Release\R_bsp.obj
+.\Release\R_data.obj
+.\Release\R_draw.obj
+.\Release\R_main.obj
+.\Release\R_plane.obj
+.\Release\R_segs.obj
+.\Release\R_sky.obj
+.\Release\r_splats.obj
+.\Release\R_things.obj
+.\Release\S_sound.obj
+.\Release\Screen.obj
+.\Release\Sounds.obj
+.\Release\St_lib.obj
+.\Release\St_stuff.obj
+.\Release\V_video.obj
+.\Release\W_wad.obj
+.\Release\Wi_stuff.obj
+.\Release\Z_zone.obj
+.\Release\winlgcy.res
+.\Release\tmap.obj>
+Creating command line "link.exe @c:\tmp\tmp\RSP7013.TMP" 
+Compiling...
+i_tcp.c
+Linking...
+
+
+
+windoom3.exe - 0 error(s), 0 warning(s)

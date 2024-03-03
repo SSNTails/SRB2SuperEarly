@@ -23,15 +23,15 @@ WFLAGS=-Wall # -W -Wno-unused -Wno-sign-compare
 #indicate platform and what interface use with
 # posible value for now : DJGPPDOS
 #			  LINUX
-DJGPPDOS=1
-#LINUX=1
+#DJGPPDOS=1
+LINUX=1
 
 #determine the interface directory (where you put all i_*.c)
 ifdef DJGPPDOS
        INTERFACE=DJGPPDOS
 else
        ifdef LINUX
-	     INTERFACE=linux_x
+	     INTERFACE=LINUX_X
        endif
 endif
 
@@ -52,13 +52,13 @@ endif #ifdef DJGPPDOS
 
 ifdef LINUX
 
-	LINUXOPTS=-DUSEASM -DNORMALUNIX -DLINUX -DOLD_SOUND_DRIVER -DMUSSERV -DSNDSERV
+	LINUXOPTS=-DUSEASM -DNORMALUNIX -DLINUX -DOLD_SOUND_DRIVER -DMUSSERV -DSNDSERV -m32
 
-	#X=1
+	X=1
 	ifdef X
 
 	      OPTS=$(LINUXOPTS) -DVID_X11 -DPOLL_POINTER -I.
-	LDFLAGS=-L/usr/X11R6/lib
+	LDFLAGS=-L/usr/X11R6/lib -z muldefs
 	LIBS=-lXext -lX11 -lm
 	# name of the exefile
 	EXENAME=llxdoom
@@ -88,7 +88,7 @@ else
 
 	# build a normal optimised version
 	ifdef PGCC
-		CFLAGS = -g -mpentium -O6 -ffast-math -fomit-frame-pointer $(OPTS)
+		CFLAGS = -g -m32 -mcpu=pentium -O6 -ffast-math -fomit-frame-pointer -fno-PIC $(OPTS)
 	else
 		CFLAGS = -g -m486 -O3 -ffast-math -fomit-frame-pointer $(OPTS)
 	endif

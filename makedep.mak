@@ -21,8 +21,8 @@ WFLAGS=-Wall # -W -Wno-unused -Wno-sign-compare
 #indicate platform and what interface use with
 # posible value for now : DJGPPDOS
 #                         LINUX      (not implemented)
-DJGPPDOS=1
-#LINUX=1
+#DJGPPDOS=1
+LINUX=1
 
 #determine the interface directory (where you put all i_*.c)
 ifdef DJGPPDOS
@@ -53,7 +53,7 @@ OBJS=   \
                 $(O)/dstrings.o         \
                 $(O)/i_sound.o          \
                 $(O)/i_cdmus.o          \
-                $(O)/i_video.o          \
+                $(O)/i_video_ggi.o          \
                 $(O)/i_net.o            \
                 $(O)/i_tcp.o            \
                 $(O)/i_system.o         \

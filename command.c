@@ -659,7 +659,7 @@ void VS_Print (vsbuf_t *buf, char *data)
 //
 // =========================================================================
 
-static consvar_t  *consvar_vars;       // list of registered console variables
+consvar_t  *consvar_vars;       // list of registered console variables
 static char       *cv_null_string = "";
 
 

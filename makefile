@@ -52,7 +52,7 @@ endif #ifdef DJGPPDOS
 
 ifdef LINUX
 
-	LINUXOPTS=-DNORMALUNIX -DLINUX -DOLD_SOUND_DRIVER -DMUSSERV -DSNDSERV
+	LINUXOPTS=-DNORMALUNIX -DLINUX -DOLD_SOUND_DRIVER -DMUSSERV -DSNDSERV -m32
 
 	X=1
 	ifdef X
@@ -88,7 +88,7 @@ else
 
 	# build a normal optimised version
 	ifdef PGCC
-		CFLAGS = -g -O6 -ffast-math -fomit-frame-pointer -fno-PIC -fPIE $(OPTS)
+		CFLAGS = -g -m32 -mcpu=pentium -O6 -ffast-math -fomit-frame-pointer -fno-PIC $(OPTS)
 	else
 		CFLAGS = -g -m486 -O3 -ffast-math -fomit-frame-pointer $(OPTS)
 	endif

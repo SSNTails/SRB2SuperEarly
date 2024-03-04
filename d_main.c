@@ -1381,6 +1381,7 @@ void D_DoomMain (void)
 
    //--------------------------------------------------------- CONSOLE
     // setup loading screen
+    CONS_Printf("SCR_Startup...\n");
     SCR_Startup ();
 
     // we need the font of the console

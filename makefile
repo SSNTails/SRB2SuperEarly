@@ -52,7 +52,7 @@ endif #ifdef DJGPPDOS
 
 ifdef LINUX
 
-	LINUXOPTS=-DUSEASM -DNORMALUNIX -DLINUX -DOLD_SOUND_DRIVER -DMUSSERV -DSNDSERV -m32
+	LINUXOPTS=-DNORMALUNIX -DLINUX -DOLD_SOUND_DRIVER -DMUSSERV -DSNDSERV
 
 	X=1
 	ifdef X
@@ -88,7 +88,7 @@ else
 
 	# build a normal optimised version
 	ifdef PGCC
-		CFLAGS = -g -m32 -mcpu=pentium -O6 -ffast-math -fomit-frame-pointer -fno-PIC $(OPTS)
+		CFLAGS = -g -O6 -ffast-math -fomit-frame-pointer -fno-PIC -fPIE $(OPTS)
 	else
 		CFLAGS = -g -m486 -O3 -ffast-math -fomit-frame-pointer $(OPTS)
 	endif
@@ -160,11 +160,9 @@ OBJS=	$(EXTRAOBJS) \
 		$(O)/z_zone.o		\
 		$(O)/info.o		\
 		$(O)/sounds.o	\
-		$(O)/tmap.o	\
 		$(O)/p_fab.o	\
 		$(O)/dehacked.o \
 		$(O)/qmus2mid.o \
-		$(O)/vid_copy.o \
 		$(O)/g_input.o	\
 		$(O)/screen.o	\
 		$(O)/console.o	\
@@ -630,9 +628,6 @@ $(O)/sounds.o: sounds.c doomtype.h sounds.h r_defs.h m_fixed.h d_think.h \
  screen.h command.h r_things.h z_zone.h
 	$(CC) $(CFLAGS) $(LDFLAGS) $(WFLAGS) -c $< -o $@
 
-$(O)/tmap.o: tmap.s asm_defs.inc
-	$(CC) $(OPTS) $(SFLAGS) -x assembler-with-cpp -c $< -o $@
-
 $(O)/p_fab.o: p_fab.c doomdef.h doomtype.h g_state.h m_swap.h g_game.h \
  doomstat.h doomdata.h d_player.h d_items.h p_pspr.h m_fixed.h \
  tables.h info.h d_think.h p_mobj.h d_ticcmd.h d_clisrv.h d_netcmd.h \
@@ -650,9 +645,6 @@ $(O)/dehacked.o: dehacked.c doomdef.h doomtype.h g_state.h m_swap.h \
 $(O)/qmus2mid.o: qmus2mid.c doomdef.h doomtype.h g_state.h m_swap.h \
  i_system.h d_ticcmd.h d_event.h byteptr.h m_swap.h qmus2mid.h
 	$(CC) $(CFLAGS) $(LDFLAGS) $(WFLAGS) -c $< -o $@
-
-$(O)/vid_copy.o: vid_copy.s asm_defs.inc
-	$(CC) $(OPTS) $(SFLAGS) -x assembler-with-cpp -c $< -o $@
 
 $(O)/vid_vesa.o: $(INTERFACE)/vid_vesa.c i_system.h \
  d_ticcmd.h doomtype.h d_event.h \

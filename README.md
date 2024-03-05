@@ -6,6 +6,8 @@
 
 Here is a VERY early copy of the source code that I sent to my friend Saxman on September 14, 1999. It is so early, it is almost stock Doom Legacy v1.28. You can find edits made by searching for the string "Tails".
 
+If you get an error, "I_RegisterSong: StreamBufferSetup FAILED", that means you must use the -nomusic parameter to launch the game.
+
 #### Unlike the February 2000 Prototype, this code HAS NOT been modified to function on modern systems!
 
 I believe it is possible to pull the February 2000 prototype backwards to be compatible with this source code.

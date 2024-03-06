@@ -114,6 +114,7 @@ void    ASMCALL R_DrawSkyColumn_8 (void);
 void    ASMCALL R_DrawShadeColumn_8 (void);             //smokie test..
 void    ASMCALL R_DrawFuzzColumn_8 (void);
 void    ASMCALL R_DrawTranslucentColumn_8 (void);
+void    ASMCALL R_DrawShadeColumn_8 (void); 
 void    ASMCALL R_DrawTranslatedColumn_8 (void);
 void    ASMCALL R_DrawSpan_8 (void);
 
